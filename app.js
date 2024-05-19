@@ -65,18 +65,18 @@ function addItem(e) {
     editElement.innerHTML = value;
     displayAlert("value changed", "success");
 
-
+    
     editLocalStorage(editID, value);
     setBackToDefault();
   } else {
     displayAlert("please enter value", "danger");
   }
 }
-// display alert
+
 function displayAlert(text, action) {
   alert.textContent = text;
   alert.classList.add(`alert-${action}`);
-  // remove alert
+  
   setTimeout(function () {
     alert.textContent = "";
     alert.classList.remove(`alert-${action}`);
